@@ -1,0 +1,368 @@
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+*{
+    box-sizing: border-box;
+  }
+  
+  /* Clear fix hack */
+  .clearfix:after {
+       content: ".";
+       display: block;
+       clear: both;
+       visibility: hidden;
+       line-height: 0;
+       height: 0;
+  }
+  
+  .clear {
+      clear: both;
+  }
+  
+  .alignright {
+      float: right;
+      padding: 0 0 10px 10px; /* note the padding around a right floated image */
+  }
+  
+  .alignleft {
+      float: left;
+      padding: 0 10px 10px 0; /* note the padding around a left floated image */
+  }
+  
+  /******************************************
+  /* BASE STYLES
+  /*******************************************/
+  
+  body {
+       color: #000;
+       font-size: 12px;
+       line-height: 1.4;
+       font-family: Helvetica, Arial, sans-serif;
+  }
+  
+  
+  /******************************************
+  /* LAYOUT
+  /*******************************************/
+  header{
+      border: 1px solid black;
+  }
+  h1{
+      font-size: 3rem;
+      text-align: center;
+  }
+  ul{
+      display: flex;
+      /* border: 1px solid black; */
+      font-weight: bold;
+  }
+  .mainnav{
+      display: flex;
+      border-bottom: 1px solid lightgray;
+      justify-content: center;
+      justify-content: space-evenly;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: black;
+      border-top: 2px solid black;
+  }
+  .navtwo{
+      display:flex;
+      justify-content:center;
+      margin-bottom: 0.5%;
+  }
+  svg{
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  main{
+      display: flex;
+  }
+  .topmost{
+      display: flex;
+      font-size: 1.1rem;
+      justify-content: space-between;
+  }
+  .topmost div{
+      display: flex;
+      width: 300px;
+  }
+  .btn{
+      background-color: lightblue;
+      color: white;
+  }
+  .left, .right{
+      justify-content: space-evently;
+      align-items: center;
+  }
+  .right input{
+      font-weight: bold;
+      border-radius: 3px;
+      border-color: transparent;
+      height: 28px;
+  }
+  .languages, .languages div{
+    display: flex;
+    justify-content: center;
+  }
+  .languages{
+      margin-top:1%;
+      border-bottom: 1px solid lightgrey;
+  }
+  .languages div{
+      border: 1 px solid lightgrey;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+  }
+  .languages li{
+      font-size: 1rem;
+      list-style: none;
+  }
+  .chinese{
+      margin-left: 5px;
+      margin-right: 5px;
+  }
+  .chinese a, .spanish a{
+      color: grey;
+      font-weight: normal;
+  }
+  .information{
+      width: 120%;
+      margin-left: -10%;
+      list-style: none;
+  }
+  .information li{
+      margin-left: 3%;
+  }
+  .information span{
+      color: grey;
+  }
+  .leftcolumn, .midcolumn, .opinion{
+      margin-top: 0.65%;
+  }
+  .leftcolumn{
+      max-width:25%;
+  }
+  .leftcolumn h3{
+      font-size: 1.1rem;
+      font-weight: bold;
+  }
+  .leftcolumn h2{
+      font-weight: bold;
+      font-size: 2rem;
+      font-style: italic;
+  }
+  .leftcolumn span{
+      font-size: 1rem;
+  }
+  .author{
+      font-size: 1rem;
+      margin-top: 1%;
+      color: gray;
+  }
+  .trumpsection{
+      display: block;
+      list-style: none;
+      font-weight: normal;
+      font-size: 1rem;
+      margin-bottom: 2%;
+      margin-top: 5%;
+  }
+  .rubiosection h3{
+    font-size: 1.7rem;
+    font-style: italic;
+  }
+  .rubiosection p{
+      font-size: 1rem;
+  }
+  .midcolumn{
+      max-width: 40%;
+      padding: 5px;
+  }
+  .midcolumn img{
+      max-width: 100%;
+  }
+  .midcolumn p{
+      font-size: 1rem;
+      font-weight: normal;
+  }
+  .midcolumn h3{
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-top: 2%;
+  }
+  .midcolumn h5{
+      font-weight: bold;
+      margin-top: 1%;
+  }
+  .mininav{
+      display: flex;
+      justify-content: center;
+      justify-content: space-evenly;
+  }
+  .midcolumn h4{
+      font-size: 1rem;
+      font-weight: bold;
+      margin-top: 2%;
+  }
+  .trumpjr{
+      float: right;
+      width: 20%;
+  }
+  .rightcolumn{
+      line-height: 1.2;
+      border-left: 1px solid lightgrey;
+      padding: 5px;
+      max-width: 36.5%
+  }
+  .rightcolumn h3{
+      font-weight: bnold;
+      text-align: center;
+  }
+  .topopinions{
+      border-bottom: 2px solid lightgrey;
+      display: flex;
+  }
+  .topopinions img{
+      float: right;
+      max-width: 15%;
+  }
+  .topopinions{
+      border-bottom: 2px solid lightgrey;
+      display: flex;
+  }
+  .topopinions section{
+      padding: 1%;
+  }
+  .obama{
+      border-right: 1px solid lightgrey;
+  }
+  .topopinions h4{
+      font-weight: bold;
+      font-size: 1 rem;
+  }
+  .topopinions p{
+      font-size: 1rem;
+  }
+  .topopinions span{
+      color: grey;
+  }
+  .topopinions div{
+      margin-top: 2%;
+  }
+  .topopinions ul{
+      display: block;
+      margin-top: 4%;
+  }
+  .small{
+      display: flex;
+      margin-top: 3%;
+  }
+  .smallLeft, .smallRight{
+      padding: 5px;
+      flex: 1;
+  }
+  .smallLeft{
+      border-right: 1px solid lightgray;
+  }
+  .small h5{
+      font-weight: bold;
+      font-size: 1rem;
+  }
+  .small span{
+      font-size: 0.9rem;
+  }
+  .small i{
+      text-align: center;
+      font-size: 3rem;
+  }
+  .large{
+      display: flex;
+      flex-direction: center;
+      font-size: 3rem;
+  }
+  .large div{
+      flex: 1;
+      border-top: 1px solid lightgrey;
+  }
+  .large span, .large p{
+      font-size: 1rem;
+  }
+  .large img{
+      max-width: 10%;
+      float:right;
+  }
+  /******************************************
+  /* ADDITIONAL STYLES
+  /*******************************************/
+  @media (max-width: 1000px){
+    .hideIt{
+      display: none;
+    }
+    .midcolumn{
+      max-width: 60%;
+    }
+    .leftcolumn{
+      max-width: 300px;
+    }
+    main{
+      flex-wrap: wrap;
+    }
+    .rightcolumn{
+      max-width: 100%;
+      margin-left: 5%;
+      margin-top: 5%;
+    }
+  }
+  @media (max-width: 800px){
+    main{
+      flex-direction: column;
+    }
+  
+    .leftcolumn{
+      max-width: 100%;
+      order: 2;
+    }
+    .midcolumn{
+      order: 1;
+      max-width: 100%;
+    }
+    .rightcolumn{
+      margin-left: 0;
+      max-width: 100%;
+      order: 3;
+    }
+  
+    .mainnav{
+      border-top: 2px solid black;
+      border-bottom: 1px solid lightgray;
+      justify-content: center;
+      justify-content: space-evenly;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: black;
+      display: hidden;
+    }
+  }
+  
+  @media (max-width: 600px){
+    .midcolumn{
+      max-width: 100%;
+      order: 1;
+    }
+    .leftcolumn{
+      margin-top: 5%;
+      max-width: 500px;
+      order: 2;
+    }
+    .rightcolumn{
+      display: flex;
+      flex-direction: column;
+      margin-top: 10%;
+      order: 3;
+    }
+  }
+  
